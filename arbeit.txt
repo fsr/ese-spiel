@@ -1,0 +1,22 @@
+Punktfarben:
+
+Krankheit           schwarz
+Informiertheit      weiss
+Egoismus            gelb
+Gute Freunde        grün
+Lebenserfahrung     blau
+
+==> Alles bis auf Krankheitspunkte nach Gutdünken verteilen.
+Vergebene Punkte protokollieren.
+
+Zusätzlich vergibt das Arbeitsamt natürlich noch Jobs. Wie ihr
+das macht, ist Euch überlassen (Aushang oder ziehen lassen). 
+Protokolliert, welcher Gruppe ihr wieviel Geld in einem Semester
+gegeben habt und beachtet bitte folgende Obergrenze pro Gruppe
+und Semester:
+
+1. Semester     650 EUR / Gruppe
+2. Semester     550 EUR / Gruppe
+3. Semester     450 EUR / Gruppe
+4. Semester     350 EUR / Gruppe
+

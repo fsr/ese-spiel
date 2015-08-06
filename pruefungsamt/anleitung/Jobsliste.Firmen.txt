@@ -1,0 +1,98 @@
+Jobaushaenge
+
+Der Einfachkeit halber sind die Aushaenge auf der Rueckseite nummeriert.
+Jobs werden nur vergeben, wenn der Arbeitsuchende seine Aufgabe ungefaehr
+beschreiben kann (d.h. den Zettel gelesen und sich die Stichworte
+gemerkt hat). Es sollte auf eine halbwegs gerechte Verteilung zwischen
+den Gruppen geachtet werden.
+
+Im Laufe jedes Semester sollten Jobs im Wert von ca. 2000 DM ausgehaengt werden.
+
+Nr   Stichworte       Gesamtwert Wert/Job Anzahl
+
+1  Benutzerbetreuer     300 DM   100 DM/10h  3
+   Windows 00
+
+2  Hiwi Mustererkenng   300 DM   100 DM/10h  3
+   Laola-Projekt
+   Trainerwechsel
+   N.Iman 13.123
+
+3  Babyphone, Windel CE 200 DM   100 DM/10h  2
+   Babyland 0190/123456
+
+4  Kaerwa, Geisterbahn  200 DM   100 DM/20h  2
+   Furchtheim Entertainment
+   Kitzmannstr 5, Furchtheim
+
+5  Firmennetze Fusion  1000 DM   200 DM/20h  5
+   Irata/Pear Rechner
+   Wintel Deutschland
+
+6  Lispler (Hiwi)       400 DM   200 DM/20h  2
+   UFO-Erkennung
+   in Schema S.Toyan
+
+7  Programmier-Hiwi     200 DM   200 DM/20h  1
+   Doppelkopf-Server
+   Mensa-Eisautomat, Auslog-Service
+   B.Ritter 08.120
+
+8  Luzifer Techno Logik 400 DM   200 DM/10h  2
+   Getraenkeverbrauchsv.
+   Colamix-Datenbanken
+   LTL, Nowhere-to-park 4711, Nbg.
+
+9  Hacker Firewalltest  600 DM   200 DM/5h   3
+   NASA-Hacking-Certificate (vorlegen)
+   DataLoss Germany GmbH
+
+10 Turingmaschine       300 DM   100 DM/20h  3
+   Handwerkliche Faehigkeiten
+   Datev, Nbg.
+
+11 Compi putt           200 DM   200 DM/5h   1
+
+12 Anderswo Konsultanz  200 DM   100 DM/10h  2
+   Orakel-Programme
+   Beraterjob
+
+13 Marktforschung       500 DM   100 DM/20h  5
+   Mousepads Telefoninterviews
+   GFK, Nuernberg
+
+14 Datenbankumstellung  300 DM   100 DM/10h  3
+   Augenbraue 94 ->
+   -> Fontaene 98
+   Steuerrecht
+   Datev, Nbg.
+
+15 Uebungsleiter        500 DM   100 DM/10h  5
+   Hiroglyphie
+   (Haben Sie den Schein?)
+
+16 Crosscompilerbau     400 DM   200 DM/20h  2
+   bedrohte Sprachen: 
+   Also 68, Atta, Modul A1 u. A2, Fanta
+   M.Inas oder D.Ormeyer
+
+17 Abakus               200 DM   200 DM/5h   1
+   Power-Schieb
+   A.Riese, Staffelstein
+   (mind. 2 Begriffe muessen sein!)
+
+18 Werkstudent bei SHN  600 DM   200 DM/10h  3
+   Schuckert-Halske-Nixdorf
+   Programmieraufgaben, Softwarewartung
+   Kenntnisse in fast allem
+   SHN Med, P.Ierer, Himbeerpalast 1
+
+19 Verlegen der         200 DM   100 DM/10h  2
+   Styroporsammelstelle
+   (Wo war die?)
+
+20 Friedhofsgaertner   1000 DM   200 DM/40h  5
+   Totengraeber
+   Schwerbehinderte bevorzugt
+   Amt fuer Abfallw./Recycling
+   Stadt Erlangen
