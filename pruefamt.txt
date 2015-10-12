@@ -1,0 +1,14 @@
+Punktfarben:
+
+Krankheit           schwarz
+Informiertheit      weiss
+Egoismus            gelb
+Gute Freunde        grün
+Lebenserfahrung     blau
+
+==> Alles bis auf Krankheitspunkte nach Gutdünken verteilen.
+Vergebene Punkte protokollieren.
+
+1. Pipeline in den Ferien
+2. Aushänge verbreiten
+
