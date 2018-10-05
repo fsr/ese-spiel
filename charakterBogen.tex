@@ -1,0 +1,281 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[left=0.4cm, right=0.00cm, top=1.5cm, bottom=0.5cm]{geometry}
+\usepackage{fontspec}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{float}
+\usepackage{amsmath}% http://ctan.org/pkg/amsmath
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{xifthen}
+\usepackage{color, colortbl}
+\usepackage[first=5, last=18]{lcg}
+\usepackage{hyphenat}
+\usepackage{array,booktabs}
+
+\definecolor{highlightGray}{gray}{0.85}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\pagenumbering{gobble}
+
+\setmainfont{Exo2-Regular.ttf}
+
+% \linespread{1.3}
+
+\def\chopline#1;#2;#3;#4;#5 \\{
+  \def\name{#1}
+  \def\vorliebe{#2}
+  \def\besonderheit{#3}
+  \def\highlightA{#4}
+  \def\highlightB{#5}
+}
+
+\makeatletter
+\newcommand{\foo}[1]{%
+  \ifthenelse{\equal{#1}{\highlightA} \OR \equal{#1}{\highlightB}} {%
+      \rowcolor{highlightGray}}%
+    {}%
+}%
+\makeatother
+
+\newif\ifmore \moretrue
+
+\begin{document}
+
+\newread\quelle
+\openin\quelle=characters.csv
+
+\loop
+  \read\quelle to \zeile
+  \ifeof\quelle
+    \global\morefalse
+  \else
+    \expandafter\chopline\zeile\\
+
+\color{black}
+\begin{center}
+  \fontsize{60}{60}\selectfont \name
+\end{center}
+% \vspace{1cm}
+\normalsize
+
+\renewcommand\baselinestretch{2.3}\selectfont
+\begin{minipage}[t]{.23\textwidth}
+  \begin{tabular}{c >{\color{darkgray}{}}c}
+    $\underset{\text{Stärke}}{\text{          \textbf{\huge ST}}}$ &
+    \huge \rand{\arabic{rand}} \\
+    $\underset{\text{Geschicklichkeit}}{\text{\textbf{\huge GE}}}$ &
+    \huge \rand{\arabic{rand}} \\
+    $\underset{\text{Konstitution}}{\text{    \textbf{\huge KO}}}$ &
+    \huge \rand{\arabic{rand}} \\
+    $\underset{\text{Intelligenz}}{\text{     \textbf{\huge IN}}}$ &
+    \huge \rand{\arabic{rand}} \\
+    $\underset{\text{Weisheit}}{\text{        \textbf{\huge WE}}}$ &
+    \huge \rand{\arabic{rand}} \\
+    $\underset{\text{Charisma}}{\text{        \textbf{\huge CH}}}$ &
+    \huge \rand{\arabic{rand}}
+  \end{tabular}
+\end{minipage}%
+\large
+\renewcommand\baselinestretch{1.67}\selectfont%
+\begin{minipage}[t]{.43\textwidth}
+  \begin{tabular}{c c}
+    Spieler 1: & \rule{6cm}{0.5pt} \\
+    Spieler 2: & \rule{6cm}{0.5pt} \\
+    Spieler 3: & \rule{6cm}{0.5pt} \\
+    Spieler 4: & \rule{6cm}{0.5pt} \\
+    Spieler 5: & \rule{6cm}{0.5pt} \\
+    Spieler 6: & \rule{6cm}{0.5pt} \\
+    Spieler 7: & \rule{6cm}{0.5pt}
+  \end{tabular} \\
+
+\normalsize
+
+\end{minipage} %
+\hspace{0.25cm}
+\begin{minipage}[c]{.2\textwidth}
+  \begin{tikzpicture}
+    \draw (0,0) -- ++(5.25,0) -- ++(0,-6.75) -- ++(-5.25,0) -- ++(0,6.75);
+  \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.3cm}
+\begin{minipage}[t]{.475\textwidth}
+  \Huge
+  \textcolor{gray}{Erfolge}
+
+  \vspace{0.25cm}
+
+  \large
+  \setlength\tabcolsep{0pt}
+  \begin{tabular}{!{\color{black}\vrule}
+    @{\rule[-0.75cm]{0pt}{1.8cm}}*{5}{>{\large\color{lightgray}{}}M{1.8cm} 
+    !{\color{black}\vrule}}}
+    \arrayrulecolor{black}
+    \hline
+    SLUB  & SLUB    & SLUB    & StuWe   & StuWe \\
+    \hline
+    BrKr  & BrKr    & BR      & FSR     & FSR \\
+    \hline
+    FSR   & Foyer   & Foyer   & Foyer   & VL \\
+    \hline
+    VL    & ZIH     & ZIH     & USZ     & USZ \\
+    \hline
+    CD    & CD      & ASCII   & ASCII   & ASCII \\
+    \hline
+  \end{tabular}
+  \vspace{0.37cm}
+
+  \large
+  \renewcommand\baselinestretch{1.15}\selectfont%
+  \begin{minipage}[t]{.345\textwidth}
+    {\fontsize{21}{21}\selectfont\textcolor{gray}{Vorlieben}}\\
+    \vspace{-0.95cm}
+    \begin{flushleft}\nohyphens{\vorliebe}\end{flushleft}
+  \end{minipage}\hspace{0.4cm}%
+  \begin{minipage}[t]{.57\textwidth}
+    {\fontsize{21}{21}\selectfont\textcolor{gray}{Besonderheiten}}\\
+    \vspace{-0.95cm}
+    \begin{flushleft}\nohyphens{\besonderheit}\end{flushleft}
+  \end{minipage}
+\end{minipage}
+\begin{minipage}[t]{.5\textwidth}
+  \textcolor{gray}{\Huge Lehrveranstaltungen}
+
+  \normalsize
+  \vspace{0.25cm}
+
+  \color{black}
+  \setlength\tabcolsep{0pt}
+  \begin{tabular}{| M{1.75cm}
+      @{\rule[-0.75cm]{0pt}{1.5cm}}*{1}{>{\color{black}{}\hfill}M{2.25cm} |}
+    @{\rule[-0.75cm]{0pt}{1.8cm}}*{3}{>{\color{black}{}}M{1.8cm} |}}
+    \hline
+    \vspace{0.75cm}
+    \multirow{2}{*}{\color{black} \Large \enskip1. Semester}{}
+    & \textcolor{gray}{Vorlesung}\phantom{\enskip} & & &\\
+    \cline{3-5}
+    & \textcolor{gray}{Prüfung}\phantom{\enskip} & & &\\
+    \hline
+    \vspace{0.75cm}
+    \multirow{2}{*}{\color{black} \Large \enskip2. Semester}{}
+    & \textcolor{gray}{Vorlesung}\phantom{\enskip} & & &\\
+    \cline{3-5}
+    & \textcolor{gray}{Prüfung}\phantom{\enskip} & & &\\
+    \hline
+    \vspace{0.75cm}
+    \multirow{2}{*}{\color{black} \Large \enskip3. Semester}{}
+    & \textcolor{gray}{Vorlesung}\phantom{\enskip} & & &\\
+    \cline{3-5}
+    & \textcolor{gray}{Prüfung}\phantom{\enskip} & & &\\
+    \hline
+  \end{tabular} \\
+
+\end{minipage}
+
+\vfill
+\color{gray}
+\rule{0.9395\textwidth}{0.5pt}
+\vspace{0.1cm}
+
+\footnotesize
+\renewcommand\baselinestretch{1.2}\selectfont%
+\begin{minipage}[c]{.5\textwidth}
+  \begin{tabular}{ l l }
+    FSR   & -\enskip Fachschaftsrat \\
+    PA    & -\enskip Prüfungsamt \\
+    ASCII & -\enskip \texttt{ascii} \\
+    CD    & -\enskip Count Down \\
+    ZIH   & -\enskip \multirow{2}{16cm}{Zentrum für Informationsdienste \\
+             und Hochleistungsrechnen} \\
+          & \\
+    USZ   & -\enskip Universitätssportzentrum \\
+    KK    & -\enskip Krankenkasse \\
+    StuWe & -\enskip Studierendenwerk \\
+  \end{tabular}
+\end{minipage}
+\begin{minipage}[c]{.5\textwidth}
+  \begin{tabular}{ l l }
+    PA    & -\enskip Patentamt \\
+    HB    & -\enskip Hacker Bootcamp \\
+    SLUB  & -\enskip Sächsische Landes- und Universitätsbibl. \\
+    VL    & -\enskip Vorlesung \\
+    JV    & -\enskip Jobvermittlung \\
+    Foyer & -\enskip Foyer-Bühne \\
+    AA    & -\enskip Auslandsamt \\
+    MA    & -\enskip Meldeamt \\
+    BrKr  & -\enskip Bürokratie \\
+  \end{tabular}
+\end{minipage}
+% \vspace{0.25cm}
+\color{black}
+
+\pagebreak
+
+\hfill
+\vspace{0.5cm}
+% character.csv
+% Zeile e.g. Künstler und Schummler hervorgehoben
+\begin{center}
+  \hspace{-0.4cm}
+  \begin{tabular}{!{\color{black}\vrule} >{\Large\color{black}}l
+      @{\rule[-0.75cm]{0pt}{1.8cm}}*{4}{
+      !{\color{black}\vrule}>{\large\color{gray}{}}M{1.8cm}}
+      !{\color{black}\vrule}}
+    \arrayrulecolor{black}
+    \hline%
+    \foo{Gremiensemester}%
+    Gremiensemester   & FSR   & ASCII   & Foyer   & PA   \\%
+    \hline%
+    \foo{Nachtwanderung}%
+    Nachtwanderung    & StuWe & ASCII   & CD      & ZIH  \\%
+    \hline%
+    \foo{Sportler}%
+    Sportler          & USZ   & USZ     & Foyer   & KK  \\
+    \hline
+    \foo{Russischer Hacker}%
+    Russischer Hacker & HB    & HB      & SLUB    & Foyer  \\
+    \hline
+    \foo{Regelstudienzeit}%
+    Regelstudienzeit  & PA    & JV      & PA      & Foyer  \\
+    \hline
+    \foo{Partygänger}%
+    Partygänger       & SLUB  & CD      & ASCII   & VL  \\
+    \hline
+    \foo{Streber}%
+    Streber           & ZIH   & SLUB    & VL      & USZ  \\
+    \hline
+    \foo{Wirtschaftsjob}%
+    Wirtschaftsjob    & IDEE  & JV      & PA      & AA  \\
+    \hline
+    \foo{SHK}%
+    Student. Hilfskraft & PA  & JV      & ZIH     & JV  \\
+    \hline
+    \foo{Auslandssemester}%
+    Auslandssemster   & PA    & AA      & PA      & Foyer  \\
+    \hline
+    \foo{Schummler}%
+    Schummler         & SLUB  & VL      & HB      & PA   \\
+    \hline
+    \foo{Große Liebe}%
+    Große Liebe       & CD    & ASCII   & ASCII   & ZIH  \\
+    \hline
+    \foo{Wohnungswechsel}%
+    Wohnungswechsel\phantom{\enskip}
+                      & StuWe & BA      & MA      & ZIH \\
+    \hline
+  \end{tabular}%
+\end{center}%
+\pagebreak%
+%
+  \fi%
+\ifmore\repeat%
+%
+\closein\quelle%
+%
+\end{document}
