@@ -3,24 +3,13 @@
 \usepackage[left=0.4cm, right=0.00cm, top=1.5cm, bottom=0.5cm]{geometry}
 \usepackage{fontspec}
 \usepackage{xcolor}
-\usepackage{colortbl}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
-\usepackage{float}
-\usepackage{amsmath}% http://ctan.org/pkg/amsmath
-\usepackage{tabularx}
-\usepackage{multirow}
 \usepackage{tikz}
 \usepackage{xifthen}
-\usepackage{color, colortbl}
-\usepackage[first=5, last=18]{lcg}
-\usepackage{hyphenat}
 \usepackage{array,booktabs}
-\usepackage{lscape}
 
 \definecolor{eseColor}{RGB}{1, 133, 84}
-
-\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
 \pagenumbering{gobble}
 
@@ -34,9 +23,6 @@
 
 \newif\ifmore \moretrue
 \newif\ifnewpage \newpagetrue
-
-\newboolean{newPage}
-\setboolean{newPage}{true}
 
 \begin{document}
 \newread\quelle
