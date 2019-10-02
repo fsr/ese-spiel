@@ -18,3 +18,4 @@ Bedingt durch <s>einen dummen Bug in einem selbst gehackten Makro</s> ein Featur
 ```
 lualatex --interaction=nonstopmode charakterBogen.tex
 ```
+
