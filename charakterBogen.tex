@@ -38,7 +38,8 @@
 \makeatletter
 \newcommand{\foo}[1]{%
   \ifthenelse{\equal{#1}{\highlightA} \OR \equal{#1}{\highlightB}} {%
-      \rowcolor{highlightGray}}%
+      \rowcolor{highlightGray}
+      }%
     {}%
 }%
 \makeatother
@@ -262,7 +263,7 @@
     Student. Hilfskraft & PA  & JV      & ZIH     & JV  \\
     \hline
     \foo{Auslandssemester}%
-    Auslandssemster   & PA    & AA      & PA      & Foyer  \\
+    Auslandssemester   & PA   & AA     & PA     & Foyer  \\
     \hline
     \foo{Schummler}%
     Schummler         & SLUB  & VL      & HB      & PA   \\
