@@ -1,21 +1,23 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[12pt, a4paper, table]{article}
 
+% page setup
 \usepackage[left=0.4cm, right=0.00cm, top=1.5cm, bottom=0.5cm]{geometry}
-\usepackage{fontspec}
-\usepackage[table]{xcolor}
-\usepackage{colortbl}
+% input type and language
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\usepackage{fontspec}
+% floating modifiers and tikz/math stuff
 \usepackage{float}
 \usepackage{amsmath}% http://ctan.org/pkg/amsmath
+\usepackage{tikz}
+\usepackage[first=5, last=18]{lcg}
+% logic stuff
+\usepackage{xifthen}
+% colors and tables
 \usepackage{tabularx}
 \usepackage{multirow}
-\usepackage{tikz}
-\usepackage{xifthen}
-\usepackage{color, colortbl}
-\usepackage[first=5, last=18]{lcg}
-\usepackage{hyphenat}
-\usepackage{array,booktabs}
+\usepackage{xcolor}
+\usepackage{colortbl}
 
 \definecolor{highlightGray}{gray}{0.85}
 
@@ -23,7 +25,7 @@
 
 \pagenumbering{gobble}
 
-\setmainfont{Exo2-Regular.ttf}
+\setmainfont{OpenSans}
 
 % \linespread{1.3}
 
@@ -35,14 +37,13 @@
   \def\highlightB{#5}
 }
 
-\makeatletter
-\newcommand{\foo}[1]{%
+\newcommand*{\foo}[1]{%
   \ifthenelse{\equal{#1}{\highlightA} \OR \equal{#1}{\highlightB}} {%
-      \rowcolor{highlightGray}
+      \rowcolor{highlightGray}%
       }%
+    % funny story, this little guy is just here to make the text render correctly despite errors
     {}%
 }%
-\makeatother
 
 \newif\ifmore \moretrue
 
@@ -115,7 +116,7 @@
   \large
   \setlength\tabcolsep{0pt}
   \begin{tabular}{!{\color{black}\vrule}
-    @{\rule[-0.75cm]{0pt}{1.8cm}}*{5}{>{\large\color{lightgray}{}}M{1.8cm} 
+    @{\rule[-0.75cm]{0pt}{1.8cm}}*{5}{>{\large\color{lightgray}{}}M{1.8cm}
     !{\color{black}\vrule}}}
     \arrayrulecolor{black}
     \hline
@@ -219,16 +220,14 @@
 \pagebreak
 
 \hfill
-\vspace{0.5cm}
 % character.csv
 % Zeile e.g. Künstler und Schummler hervorgehoben
 
-%------------------------------------------------------------------------ 
+%------------------------------------------------------------------------
 % ------------------------- Questlines ----------------------------------
-%------------------------------------------------------------------------ 
+%------------------------------------------------------------------------
 
 \begin{center}
-  \hspace{-0.4cm}
   \begin{tabular}{!{\color{black}\vrule} >{\Large\color{black}}l
       @{\rule[-0.75cm]{0pt}{1.8cm}}*{4}{
       !{\color{black}\vrule}>{\large\color{gray}{}}M{1.8cm}}
